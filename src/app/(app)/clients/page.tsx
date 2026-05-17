@@ -51,13 +51,16 @@ export default function ClientsPage() {
       </div>
 
       <div className="page__content">
-        <div className="glass-search mb-4">
+        <div className="glass-search mb-4" style={{ position: 'relative' }}>
+          <span style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', display: 'flex' }}>
+            <Search size={18} color="var(--text-secondary)" />
+          </span>
           <input
             className="glass-search__input"
             placeholder={t('sale_search_client')}
-            icon={<Search size={18} color="var(--text-secondary)" />}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            style={{ paddingLeft: 40 }}
           />
         </div>
 
